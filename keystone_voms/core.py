@@ -249,7 +249,7 @@ class VomsAuthNMiddleware(wsgi.Middleware):
                                               user_id)
 
     def _get_user(self, voms_info, req_tenant):
-        user_dn = voms_info["user"]
+        user_dn = voms_info["user"][-64:]
         try:
             self.identity_api.get_user_by_name(self.identity_api,
                                                user_dn,
