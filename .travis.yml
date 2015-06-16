@@ -10,10 +10,10 @@ install:
     - pip install -r /tmp/keystone/test-requirements.txt
     - pip install -r requirements.txt
     - pip install .
-    - cp tests/*py /tmp/keystone/keystone/tests
+    - cp tests/*py /tmp/keystone/keystone/tests/unit
     - cp tests/config_files/* /tmp/keystone/keystone/tests/unit/config_files
 
 script:
     - pep8 keystone_voms
     - cd /tmp/keystone/
-    - nosetests keystone.tests.test_middleware_voms_authn
+    - nosetests keystone.tests.unit.test_middleware_voms_authn
