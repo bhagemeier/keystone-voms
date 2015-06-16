@@ -19,10 +19,10 @@ from keystone import exception as ks_exc
 from keystone.assignment import controllers
 from keystone import middleware
 from keystone import tests
-from keystone.tests import default_fixtures
-from keystone.tests.ksfixtures import database
-from keystone.tests import test_auth
-from keystone.tests import test_middleware
+from keystone.tests.unit import default_fixtures
+from keystone.tests.unit.ksfixtures import database
+from keystone.tests.unit import test_auth
+from keystone.tests.unit import test_middleware
 
 import keystone_voms.core as ks_voms
 from  keystone_voms import exception
