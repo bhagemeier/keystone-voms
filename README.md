@@ -1,4 +1,4 @@
-# Keystone VOMS auth module [![Build Status](https://travis-ci.org/IFCA/keystone-voms.png?branch=stable/icehouse)](https://travis-ci.org/IFCA/keystone-voms)
+# Keystone VOMS auth module [![Build Status](https://travis-ci.org/BeneDicere/keystone-voms.svg?branch=master)](https://travis-ci.org/BeneDicere/keystone-voms)
 
 This module is intended to provide VOMS authentication to a Grizzly
 OpenStack Keystone. It is designed to be integrated as an external
