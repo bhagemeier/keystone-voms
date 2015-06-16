@@ -21,9 +21,9 @@ from keystone.common import wsgi
 from keystone import exception as ks_exc
 from keystone import identity, assignment
 import keystone.middleware
-from keystone.openstack.common.gettextutils import _
-from keystone.openstack.common import jsonutils
-from keystone.openstack.common import log
+
+from oslo_serialization import jsonutils
+from oslo_log import log
 
 from keystone_voms import exception
 from keystone_voms import voms_helper
