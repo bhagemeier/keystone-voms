@@ -75,7 +75,7 @@ class VomsAuthNMiddleware(wsgi.Middleware):
     """
     def __init__(self, *args, **kwargs):
         self.identity_api = identity.dependency.get_provider("identity_api") or identity.Manager()
-        self.assignment_api = assignment.Manager()
+        self.assignment_api = assignment.dependency.get_provider("assignment_api") or assignment.Manager()
 
         # VOMS stuff
         try:
