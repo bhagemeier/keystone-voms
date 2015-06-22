@@ -74,7 +74,7 @@ class VomsAuthNMiddleware(wsgi.Middleware):
     Sets 'ssl' in the context as a dictionary containing this data.
     """
     def __init__(self, *args, **kwargs):
-        self.identity_api = identity.Manager()
+        self.identity_api = identity.dependency.get_provider("identity_api") or identity.Manager()
         self.assignment_api = assignment.Manager()
 
         # VOMS stuff
